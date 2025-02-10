@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$>> '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -124,6 +124,17 @@ alias s='ls'
 alias la='ls -la'
 alias al='ls -la'
 
+# cd to common places
+alias cdp='cd ~/pCloudDrive/'
+alias cdd='cd ~/Documents/'
+alias cds='cd ~/Documents/UO/'
+alias cdsp='cd ~/pCloudDrive/001_2025_Winter/'
+
+# mapping flatpak to regular commands
+alias xopp="flatpak run com.github.xournalpp.xournalpp"
+alias xournalpp="xopp"
+
+
 # startup
 echo "----------------------------------------------------------------------------------------------------"
 echo "------------------------------- Hello Owen Keep up the good work :-) -------------------------------"
@@ -131,4 +142,3 @@ echo "--------------------------------------------------------------------------
 echo " "
 
 neofetch
-
